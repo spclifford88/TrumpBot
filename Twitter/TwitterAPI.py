@@ -1,14 +1,12 @@
 import tweepy
 import time
 import json
-#///////////////////////////////////////////////////////////////
-access_token = ""
-access_token_secret = ""
-consumer_key = ""
-consumer_secret = ""
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+import PersonalOAuth as pKey
+
+#///////////////////////////////////////////////////////////////
+auth = tweepy.OAuthHandler(pKey.consumer_key, pKey.consumer_secret)
+auth.set_access_token(pKey.access_token, pKey.access_token_secret)
 api = tweepy.API(auth)
 
 #///////////////////////////////////////////////////////////////
