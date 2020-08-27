@@ -1,14 +1,12 @@
 import tweepy
 import json
 
-#///////////////////////////////////////////////////////////////
-access_token = "3280145162-s5eyaIiSCfzMU46TyODBRqNxMln13XgxsNVfMTn"
-access_token_secret = "Y3vtFJBhmK7Gj4RhPfCyXcmTqvaXorZavDiEJuAl4t6pX"
-consumer_key = "u8iexDLmvil1b7pqcTmyDgArF"
-consumer_secret = "46qEhTbOQRO36RXOGJe3iwxKJrEwRlkU6Kwzcd29VMC1xswpJJ"
+# PersonalOAuth is on .gitignore
+import PersonalOAuth as pKey
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+#///////////////////////////////////////////////////////////////
+auth = tweepy.OAuthHandler(pKey.consumer_key, pKey.consumer_secret)
+auth.set_access_token(pKey.access_token, pKey.access_token_secret)
 api = tweepy.API(auth)
 
 #///////////////////////////////////////////////////////////////
